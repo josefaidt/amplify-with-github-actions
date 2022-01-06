@@ -2,8 +2,9 @@
 
 **Features**:
 
-- builds and deploys frontend + backend changes on push
-- creates new Amplify environments on push to new branches
+- [x] builds and deploys frontend + backend changes on push
+- [x] creates new Amplify environments on push to new branches
+- [ ] diff backend deploys
 
 **Not Tested**:
 
