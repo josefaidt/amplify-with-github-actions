@@ -1,3 +1,3 @@
 export default function HomePage(props) {
-  return <h1>Hello from the homepage!</h1>
+  return <h2>Hello from the homepage!</h2>
 }
