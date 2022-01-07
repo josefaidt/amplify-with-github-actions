@@ -1,7 +1,7 @@
-name: Deploy AWS Amplify project
+name: Publish AWS Amplify project
 on: push
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
