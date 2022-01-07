@@ -38,6 +38,9 @@
           "appId": "d1c7idnpjagby",
           "type": "manual"
         }
+      },
+      "auth": {
+        "amplifywithgithubact966aee66": {}
       }
     }
   }
