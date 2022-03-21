@@ -1,49 +1,47 @@
 {
-  "main": {
+  "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-amplifywithgithubact-main-164414-authRole",
-      "UnauthRoleArn": "arn:aws:iam::814763596509:role/amplify-amplifywithgithubact-main-164414-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::814763596509:role/amplify-amplifywithgithubact-main-164414-authRole",
+      "AuthRoleName": "amplify-amplifywithgithubact-dev-110020-authRole",
+      "UnauthRoleArn": "arn:aws:iam::814763596509:role/amplify-amplifywithgithubact-dev-110020-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::814763596509:role/amplify-amplifywithgithubact-dev-110020-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-amplifywithgithubact-main-164414-deployment",
-      "UnauthRoleName": "amplify-amplifywithgithubact-main-164414-unauthRole",
-      "StackName": "amplify-amplifywithgithubact-main-164414",
-      "StackId": "arn:aws:cloudformation:us-east-1:814763596509:stack/amplify-amplifywithgithubact-main-164414/2e125200-6f42-11ec-baf7-0e3913788e35",
-      "AmplifyAppId": "d1c7idnpjagby"
+      "DeploymentBucketName": "amplify-amplifywithgithubact-dev-110020-deployment",
+      "UnauthRoleName": "amplify-amplifywithgithubact-dev-110020-unauthRole",
+      "StackName": "amplify-amplifywithgithubact-dev-110020",
+      "StackId": "arn:aws:cloudformation:us-east-1:814763596509:stack/amplify-amplifywithgithubact-dev-110020/0440c240-a930-11ec-914a-12506eda3be1"
     },
     "categories": {
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d1c7idnpjagby",
-          "type": "manual"
-        }
-      },
       "auth": {
         "amplifywithgithubact966aee66": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "type": "manual"
+        }
       }
     }
   },
-  "next": {
+  "main": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-amplifywithgithubact-next-235314-authRole",
-      "UnauthRoleArn": "arn:aws:iam::814763596509:role/amplify-amplifywithgithubact-next-235314-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::814763596509:role/amplify-amplifywithgithubact-next-235314-authRole",
+      "AuthRoleName": "amplify-amplifywithgithubact-main-110446-authRole",
+      "UnauthRoleArn": "arn:aws:iam::814763596509:role/amplify-amplifywithgithubact-main-110446-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::814763596509:role/amplify-amplifywithgithubact-main-110446-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-amplifywithgithubact-next-235314-deployment",
-      "UnauthRoleName": "amplify-amplifywithgithubact-next-235314-unauthRole",
-      "StackName": "amplify-amplifywithgithubact-next-235314",
-      "StackId": "arn:aws:cloudformation:us-east-1:814763596509:stack/amplify-amplifywithgithubact-next-235314/d0b75970-6f4b-11ec-984d-12ca0e467fbf",
-      "AmplifyAppId": "d1c7idnpjagby"
+      "DeploymentBucketName": "amplify-amplifywithgithubact-main-110446-deployment",
+      "UnauthRoleName": "amplify-amplifywithgithubact-main-110446-unauthRole",
+      "StackName": "amplify-amplifywithgithubact-main-110446",
+      "StackId": "arn:aws:cloudformation:us-east-1:814763596509:stack/amplify-amplifywithgithubact-main-110446/a5cea370-a930-11ec-98de-0a42328e7139",
+      "AmplifyAppId": "d3nxwqc7d66kr7"
     },
     "categories": {
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d1c7idnpjagby",
-          "type": "manual"
-        }
-      },
       "auth": {
         "amplifywithgithubact966aee66": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3nxwqc7d66kr7",
+          "type": "manual"
+        }
       }
     }
   }

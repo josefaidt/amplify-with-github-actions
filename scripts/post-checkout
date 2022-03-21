@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# .git/hooks/post-checkout
+# Utility to change AWS Amplify environments on branch checkout
+
+# helper to get path to aws-exports.js
+function get_aws_exports_path {
+  local AMPLIFY_PROJECT_CONFIG_PATH="amplify/.config/project-config.json"
+  local AMPLIFY_EXPORTS_PATH=$(jq -r '.javascript.config.SourceDir' $AMPLIFY_PROJECT_CONFIG_PATH)
+  if [[ "$AMPLIFY_EXPORTS_PATH" == */ ]]
+    then echo "${AMPLIFY_EXPORTS_PATH}aws-exports.js"
+    else echo "${AMPLIFY_EXPORTS_PATH}/aws-exports.js"
+  fi
+}
+
+# helper to grab env names from Amplify's team provider info
+function get_amplify_envs {
+  local AMPLIFY_TEAM_PROVIDER_INFO="amplify/team-provider-info.json"
+  local AMPLIFY_ENVS=$(jq -c -r '. |= keys' $AMPLIFY_TEAM_PROVIDER_INFO)
+  echo $AMPLIFY_ENVS
+}
+
+function checkout_amplify_env {
+  ENV_NAME=$1
+  [[ $(command -v amplify) ]] && [[ ! -z "$ENV_NAME" ]] && amplify env checkout $ENV_NAME
+}
+
+function main {
+  local GIT_CHECKOUT_TARGET_TYPE=$1
+  # check for branch checkout
+  if [[ $GIT_CHECKOUT_TARGET_TYPE == 1 ]]; then
+    local AMPLIFY_EXPORTS=$(get_aws_exports_path)
+    if [[ -f "$AMPLIFY_EXPORTS" ]]; then
+      local GIT_CURRENT_BRANCH=$(git branch --show current)
+      local AMPLIFY_ENVS=$(get_amplify_envs)
+      for AMPLIFY_ENV in $(echo $AMPLIFY_ENVS | jq -r '.[] | @text')
+      do
+        if [[ $AMPLIFY_ENV == $GIT_CURRENT_BRANCH ]]; then
+          echo 'Running "amplify env checkout ${AMPLIFY_ENV}"'
+          checkout_amplify_env $AMPLIFY_ENV
+          break
+        fi
+      done
+    fi
+  fi
+}
+
+main $3

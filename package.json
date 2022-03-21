@@ -6,7 +6,8 @@
   "scripts": {
     "start": "next start",
     "build": "next build && next export",
-    "dev": "next"
+    "dev": "next",
+    "test": "echo 'hello'"
   },
   "dependencies": {
     "@aws-amplify/ui-react": "^2.1.6",
